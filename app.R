@@ -35,7 +35,7 @@ NVCO_num <- data.frame(id_num = NVCO_temp$id,
 )
 
 # clean data to turn NA values from '-99' to 'NA'
-NVCO_num[,-c(2,3)] <-  replace_with_na_all(NVCO[,-c(2,3)], condition=~.x==-99)
+NVCO_num[,-c(2,3)] <-  replace_with_na_all(NVCO_num[,-c(2,3)], condition=~.x==-99)
 
 # create a copy of the data set with variables correctly described as factors
 NVCO_fac <- data.frame(id_num = NVCO_num$id_num,
